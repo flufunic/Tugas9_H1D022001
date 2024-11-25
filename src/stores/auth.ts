@@ -23,7 +23,6 @@ export const useAuthStore = defineStore('auth', () => {
                 scopes: ['profile', 'email'],
                 grantOfflineAccess: true,
             });
-
             const googleUser = await GoogleAuth.signIn();
 
             const idToken = googleUser.authentication.idToken;
